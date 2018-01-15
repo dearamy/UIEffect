@@ -24,4 +24,30 @@ public class UIEffectDialogDemo : MonoBehaviour {
 	{
 		GetComponentInChildren<UIEffectCapturedImage>().Capture();
 	}
+
+
+	void OnDestroy()
+	{
+		if (shared_0 != null)
+		{
+			shared_0.Unload(true);
+			shared_0 = null;
+		}
+	}
+
+	AssetBundle shared_0;
+
+	public void Load(string name)
+	{
+		if (shared_0 == null)
+		{
+			shared_0 = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/shared_0");
+		}
+		var bundle = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/" + name);
+		var prefab = bundle.LoadAsset<GameObject>(name);
+		bundle.Unload(false);
+		bundle = null;
+
+		var go = GameObject.Instantiate(prefab,transform, false);
+	}
 }
