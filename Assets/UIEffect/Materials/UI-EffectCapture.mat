@@ -1,0 +1,2210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21026057398999826
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sub
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SUB
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21031337583197506
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Sub-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SUB UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21036212523714552
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21044374151870104
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Add
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_ADD UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21045189680259152
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Sub
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SUB UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21046699090090030
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Sub
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SUB UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21048410321325420
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21055034439760296
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Set
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SET UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21057687151386864
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21067458341841610
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21086639275997532
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Add-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_ADD UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21099158629762198
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21106697039968552
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Add-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_ADD UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21108213493709970
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Add-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_ADD UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21110769163234028
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Add-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_ADD
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21113995079352094
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Sub-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SUB UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21130563836830350
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Add-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_ADD UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21130630824660606
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21161542420228808
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21181923863030828
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Sub-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SUB UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21191804860266732
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21209861136853954
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21222481490511062
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Sub-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SUB UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21224011340283412
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Add
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_ADD UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21224595781281806
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Add-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_ADD UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21231082307953898
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Sub-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SUB UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21243412164659266
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Add-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_ADD UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21247037920771336
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Add-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_ADD UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21249999346977738
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Add-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_ADD
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21263064255177228
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Set
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SET UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21267795134941848
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Sub-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SUB UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21268394780175204
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21274557553036088
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Set-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SET UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21285614280781228
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Add
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_ADD UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21309798220976708
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21321683508402622
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21322518523789550
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Set-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SET UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21327503662819958
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Set-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SET UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21343317442839338
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Add-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_ADD UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21345746881364858
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Sub-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SUB UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21348766750605338
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Add-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_ADD UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21364303758382608
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21366131991400522
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21366167591949850
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Set
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SET UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21375315984872474
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Sub
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SUB UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21376773502252486
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Sub-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SUB UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21385461384323904
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sub-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SUB
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21392592484790732
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Set-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SET
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21420005842395524
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Set-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SET UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21421041138706870
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Set-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SET
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21436573040303546
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Sub-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SUB UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21487593881262522
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Sub
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SUB UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21493271365199870
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Set-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SET UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21496770916261988
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Add
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_ADD
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21508613466112316
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21532613303123750
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Add-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_ADD UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21535656098790462
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Add-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_ADD UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21548088948385276
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Set-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SET UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21562182624301908
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Set-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SET UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21564347630995848
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21573351207708190
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Add
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_ADD UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21595808433528470
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Sub-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SUB UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21621632517313934
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Add-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_ADD UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21633502502162276
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Set-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SET UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21636737369412334
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Add-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_ADD UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21652177577100236
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Set
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SET UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21655591899129526
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Sub
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SUB UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21663206776842228
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21664320405683808
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Set-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SET
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21673645821536158
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Set-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SET UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21696562412165960
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21696900598039250
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21712544297920996
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Sub-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SUB UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21728129277950156
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21737145294575936
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Set-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SET UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21788318408929742
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Sub-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SUB UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21791478328468870
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sub-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SUB
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21792749849979464
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sub-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SUB
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21805610750804436
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Sub-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SUB UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21808413252107300
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Set
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SET UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21814173444078700
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Add
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_ADD UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21819909443233844
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Add-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_ADD UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21840513553148280
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Add-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_ADD
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21846185415658994
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Hue-Set-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SET UI_TONE_HUE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21855844272080358
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Set-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SET UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21872575173412032
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Set-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SET UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21874405900778330
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21880498536231302
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Set-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SET UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21888968760076866
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Pixel
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_TONE_PIXEL
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21903792832621744
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Sub-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_SUB UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21931846820669066
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Set-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_COLOR_SET UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21942072069167538
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Nega-Sub-Detail
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_DETAIL UI_COLOR_SUB UI_TONE_NEGA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21966820465584986
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Set
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_COLOR_SET
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21990196445474194
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Sepia-Fast
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_FAST UI_TONE_SEPIA
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
+--- !u!21 &21999918524498266
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: UI-EffectCapture-Grayscale-Add-Medium
+  m_Shader: {fileID: 4800000, guid: 7a6f925a07c3c5846a1c782eaaeb7087, type: 3}
+  m_ShaderKeywords: UI_BLUR_MEDIUM UI_COLOR_ADD UI_TONE_GRAYSCALE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
