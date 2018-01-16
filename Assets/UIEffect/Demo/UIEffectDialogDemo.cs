@@ -39,15 +39,31 @@ public class UIEffectDialogDemo : MonoBehaviour {
 
 	public void Load(string name)
 	{
+		UnityEngine.Profiling.Profiler.BeginSample("Load Object");
 		if (shared_0 == null)
 		{
+			UnityEngine.Profiling.Profiler.BeginSample("Load Shared Object");
 			shared_0 = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/shared_0");
+			UnityEngine.Profiling.Profiler.EndSample();
 		}
+
+		UnityEngine.Profiling.Profiler.BeginSample("Load bundle Object");
 		var bundle = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/" + name);
+		UnityEngine.Profiling.Profiler.EndSample();
+
+		UnityEngine.Profiling.Profiler.BeginSample("Load asset");
 		var prefab = bundle.LoadAsset<GameObject>(name);
+		UnityEngine.Profiling.Profiler.EndSample();
+
+		UnityEngine.Profiling.Profiler.BeginSample("unLoad asset");
 		bundle.Unload(false);
 		bundle = null;
+		UnityEngine.Profiling.Profiler.EndSample();
 
+		UnityEngine.Profiling.Profiler.BeginSample("Instantiate Object");
 		var go = GameObject.Instantiate(prefab,transform, false);
+		UnityEngine.Profiling.Profiler.EndSample();
+
+		UnityEngine.Profiling.Profiler.EndSample();
 	}
 }
