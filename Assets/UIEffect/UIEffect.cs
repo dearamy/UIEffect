@@ -349,18 +349,20 @@ namespace UnityEngine.UI
 
 		public static Material GetMaterial(Shader shader, UIEffect.ToneMode tone, UIEffect.ColorMode color, UIEffect.BlurMode blur)
 		{
-			string variantName = Path.GetFileName(shader.name)
-			                     + (0 < tone ? "-" + tone : "")
-			                     + (0 < color ? "-" + color : "")
-			                     + (0 < blur ? "-" + blur : "");
-
-			var path = AssetDatabase.FindAssets("t:Material " + variantName)
+			string variantName = GetVariantName(shader, tone, color, blur);
+			return AssetDatabase.FindAssets("t:Material " + Path.GetFileName(shader.name))
 				.Select(x => AssetDatabase.GUIDToAssetPath(x))
-				.SingleOrDefault(x => Path.GetFileNameWithoutExtension(x) == variantName);
+				.SelectMany(x=>AssetDatabase.LoadAllAssetsAtPath(x))
+				.OfType<Material>()
+				.FirstOrDefault(x => x.name == variantName);
+		}
 
-			return path != null
-				? AssetDatabase.LoadAssetAtPath<Material>(path)
-					: null;
+		public static string GetVariantName(Shader shader, UIEffect.ToneMode tone, UIEffect.ColorMode color, UIEffect.BlurMode blur)
+		{
+			return Path.GetFileName(shader.name)
+				+ (0 < tone ? "-" + tone : "")
+				+ (0 < color ? "-" + color : "")
+				+ (0 < blur ? "-" + blur : "");
 		}
 #endif
 
