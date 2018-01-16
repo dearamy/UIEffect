@@ -31,19 +31,19 @@ namespace UnityEditor.UI
 		}
 
 
-		[MenuItem("Export Package/Generate Material")]
-		static void Export2()
+		[MenuItem("Export Package/Generate Material Variants")]
+		static void GenerateMaterialVariants()
 		{
 			// Export materials.
 			AssetDatabase.StartAssetEditing();
-			CreateMaterialVariants(
+			GenerateMaterialVariants(
 				Shader.Find(UIEffect.shaderName)
 				, (ToneMode[])Enum.GetValues(typeof(ToneMode))
 				, (ColorMode[])Enum.GetValues(typeof(ColorMode))
 				, (BlurMode[])Enum.GetValues(typeof(BlurMode))
 			);
 
-			CreateMaterialVariants(
+			GenerateMaterialVariants(
 				Shader.Find(UIEffectCapturedImage.shaderName)
 				, new []{ ToneMode.None, ToneMode.Grayscale, ToneMode.Sepia, ToneMode.Nega, ToneMode.Pixel, ToneMode.Hue, }
 				, (ColorMode[])Enum.GetValues(typeof(ColorMode))
@@ -55,7 +55,7 @@ namespace UnityEditor.UI
 			AssetDatabase.Refresh();
 		}
 
-		static void CreateMaterialVariants(Shader shader, ToneMode[] tones, ColorMode[] colors, BlurMode[] blurs)
+		static void GenerateMaterialVariants(Shader shader, ToneMode[] tones, ColorMode[] colors, BlurMode[] blurs)
 		{
 			var combinations = (from tone in tones
 				from color in colors
