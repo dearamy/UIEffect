@@ -30,6 +30,15 @@ namespace UnityEditor.UI
 			UnityEngine.Debug.Log("Export successfully : " + kPackageName);
 		}
 
+		[MenuItem("Export Package/Assetbundle Build")]
+		static void build()
+		{
+			BuildPipeline.BuildAssetBundles(
+				Application.streamingAssetsPath,
+				BuildAssetBundleOptions.ChunkBasedCompression | BuildAssetBundleOptions.DeterministicAssetBundle,
+				EditorUserBuildSettings.activeBuildTarget
+			);
+		}
 
 		[MenuItem("Export Package/Generate Material Variants")]
 		static void GenerateMaterialVariants()
@@ -65,6 +74,10 @@ namespace UnityEditor.UI
 			for (int i = 0; i < combinations.Length; i++)
 			{
 				var comb = combinations[i];
+
+				if (0 == comb.tone && 0 == comb.color && 0 == comb.blur)
+					continue;
+
 				EditorUtility.DisplayProgressBar("Genarate Effect Material", UIEffect.GetVariantName(shader, comb.tone, comb.color, comb.blur), (float)i/combinations.Length);
 				GetOrCreateMaterialVariant(shader, comb.tone, comb.color, comb.blur);
 			}
@@ -87,22 +100,38 @@ namespace UnityEditor.UI
 				if (0 < blur)
 					mat.EnableKeyword("UI_BLUR_" + blur.ToString().ToUpper());
 
-				string defaultName = Path.GetFileName(shader.name);
+				string defaultName = UIEffect.GetVariantName(shader, 0, 0, 0);
 				mat.name = UIEffect.GetVariantName(shader, tone, color, blur);
 
-				string materialPath = "Assets/UIEffect/Materials/" + defaultName + ".mat";
+				string materialPath = "Assets/UIEffect/MaterialsEx/" + defaultName + ".asset";
+				isDefault = false;
+#if false
+				isDefault = true;
+				materialPath = "Assets/UIEffect/Materials/" + mat.name + ".mat";
+#endif
+
+				if (!AssetDatabase.LoadAssetAtPath<MaterialCollection>(materialPath))
+				{
+					Directory.CreateDirectory(Path.GetDirectoryName(materialPath));
+//					var go = new GameObject(defaultName);
+//					PrefabUtility.CreatePrefab(materialPath, go);
+//					GameObject.DestroyImmediate(go);
+
+					AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<MaterialCollection>(), materialPath);
+					AssetDatabase.SaveAssets();
+
+				}
+
 				if (isDefault)
 				{
 					Directory.CreateDirectory(Path.GetDirectoryName(materialPath));
 					AssetDatabase.CreateAsset(mat, materialPath);
 					AssetDatabase.SaveAssets();
-					//					AssetDatabase.Refresh();
 				}
 				else
 				{
-					mat.hideFlags = HideFlags.NotEditable | HideFlags.HideInHierarchy;
+//					mat.hideFlags = HideFlags.NotEditable | HideFlags.HideInHierarchy;
 					AssetDatabase.AddObjectToAsset(mat, materialPath);
-					//					AssetDatabase.Refresh();
 				}
 			}
 			return mat;
