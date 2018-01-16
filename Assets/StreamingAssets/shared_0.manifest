@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1256002268
+CRC: 882703071
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6e1ea7b5576652748b2cc8864080d3a4
+    Hash: 0eed1b6bca5d93da9eef84f56fc9f490
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 1f201a7e2e0b91eed0d9b70a8f1a3833
+    Hash: 9d587f44204daa1953f77c2921d1dc13
 HashAppended: 0
 ClassTypes:
 - Class: 21
@@ -15,10 +15,14 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 425a232990cf24bddb49963dddae9732, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
 Assets:
-- Assets/UIEffect/Materials/UI-Effect-Pixel-Set-Detail.mat
+- Assets/UIEffect/MaterialsEx/UI-Effect2X.asset
 - Assets/UIEffect/UI-Effect.shader
 - Assets/UIEffect/Demo/Unity-chan.png
 Dependencies: []
