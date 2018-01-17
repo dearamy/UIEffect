@@ -46,7 +46,7 @@ namespace UnityEngine.UI
 		public float blur { get { return m_Blur; } set { m_Blur = Mathf.Clamp(value, 0, 4); } }
 
 		[SerializeField]
-		[Range(0, 2)]
+		[Range(0, 1)]
 		float m_Blur = 0;
 
 		/// <summary>
@@ -184,9 +184,9 @@ namespace UnityEngine.UI
 
 				// Set properties.
 				if(toneMode == UIEffect.ToneMode.Hue)
-					_buffer.SetGlobalVector("_EffectFactor", new Vector4(Mathf.Cos(toneLevel* Mathf.PI * 2), Mathf.Sin(toneLevel * Mathf.PI * 2), blur / w));
+					_buffer.SetGlobalVector("_EffectFactor", new Vector4(Mathf.Cos(toneLevel* Mathf.PI * 2), Mathf.Sin(toneLevel * Mathf.PI * 2), blur));
 				else
-					_buffer.SetGlobalVector("_EffectFactor", new Vector4(toneLevel, 0, blur / w));
+					_buffer.SetGlobalVector("_EffectFactor", new Vector4(toneLevel, 0, blur));
 
 				_buffer.SetGlobalVector("_ColorFactor", new Vector4(effectColor.r, effectColor.g, effectColor.b, effectColor.a));
 
