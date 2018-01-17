@@ -30,37 +30,70 @@ Shader "UI/Hidden/UI-EffectCapture"
 			#pragma shader_feature __ UI_COLOR_ADD UI_COLOR_SUB UI_COLOR_SET
 			#pragma shader_feature __ UI_BLUR_FAST UI_BLUR_MEDIUM UI_BLUR_DETAIL
 			#include "UI-Effect.cginc"
-			// ^^^^ [For UIEffect] ^^^^
 
-			v2f_img vert(appdata_img v)
+			// ^^^^ [For UIEffect] ^^^^
+			struct v2f
 			{
-				v2f_img o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-			
-				#if UNITY_UV_STARTS_AT_TOP
-				o.uv = half2(v.texcoord.x, 1 - v.texcoord.y);
-				#else
-				o.uv = v.texcoord;
+				float4 vertex   : SV_POSITION;
+				float2 texcoord  : TEXCOORD0;
+				
+				// vvvv [For UIEffect] vvvv
+				#if defined (UI_COLOR)						// Add color effect factor.
+				fixed4 colorFactor : COLOR1;
 				#endif
-			
-				return o;
-			}
+
+				#if defined (UI_TONE) || defined (UI_BLUR)	// Add other effect factor.
+				half4 effectFactor : TEXCOORD2;
+				#endif
+				// ^^^^ [For UIEffect] ^^^^
+			};
 
 			sampler2D _MainTex;
-			half3 _EffectFactor;
+			half4 _EffectFactor;
+			float4 _MainTex_TexelSize;
 			fixed4 _ColorFactor;
 
-			fixed4 frag(v2f_img IN) : SV_Target
+			v2f vert(appdata_img v)
+			{
+				v2f OUT;
+				OUT.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+			
+				#if UNITY_UV_STARTS_AT_TOP
+				OUT.texcoord = half2(v.texcoord.x, 1 - v.texcoord.y);
+				#else
+				OUT.texcoord = v.texcoord;
+				#endif
+
+				// vvvv [For UIEffect] vvvv : Calculate effect parameter.
+				#if defined (UI_TONE) || defined (UI_BLUR)
+				OUT.effectFactor = _EffectFactor;
+				#endif
+
+				#if UI_TONE_HUE
+				OUT.effectFactor.y = sin(OUT.effectFactor.x*3.14159265359*2);
+				OUT.effectFactor.x = cos(OUT.effectFactor.x*3.14159265359*2);
+				#endif
+				
+				#if defined (UI_COLOR)
+				OUT.colorFactor = UnpackToVec4(IN.uv1.y);
+				#endif
+				// ^^^^ [For UIEffect] ^^^^
+				
+				return OUT;
+			}
+
+
+			fixed4 frag(v2f IN) : SV_Target
 			{
 				#if UI_TONE_PIXEL
 				float pixelRate = max(1,(1 - _EffectFactor.x) * 256);
-				IN.uv = round(IN.uv * pixelRate) / pixelRate;
+				IN.texcoord = round(IN.texcoord * pixelRate) / pixelRate;
 				#endif
 				
 				#if defined (UI_BLUR)
-				half4 color = Tex2DBlurring(_MainTex, IN.uv, _EffectFactor.z);
+				half4 color = Tex2DBlurring(_MainTex, IN.texcoord, _EffectFactor.z * _MainTex_TexelSize.xy * 2);
 				#else
-				half4 color = tex2D(_MainTex, IN.uv);
+				half4 color = tex2D(_MainTex, IN.texcoord);
 				#endif
 
 				#if UI_TONE_HUE
