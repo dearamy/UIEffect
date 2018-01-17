@@ -72,6 +72,7 @@ namespace UnityEngine.UI
 			Mono,
 			Cutoff,
 			Hue,
+			Noise,
 		}
 
 		/// <summary>

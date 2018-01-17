@@ -35,7 +35,7 @@ namespace UnityEditor.UI
 
 			CreateMaterialVariant(
 				Shader.Find(UIEffectCapturedImage.shaderName)
-				, new []{ ToneMode.None, ToneMode.Grayscale, ToneMode.Sepia, ToneMode.Nega, ToneMode.Pixel, ToneMode.Hue, }
+				, new []{ ToneMode.None, ToneMode.Grayscale, ToneMode.Sepia, ToneMode.Nega, ToneMode.Pixel, ToneMode.Hue, ToneMode.Noise, }
 				, (ColorMode[])Enum.GetValues(typeof(ColorMode))
 				, (BlurMode[])Enum.GetValues(typeof(BlurMode))
 			);
