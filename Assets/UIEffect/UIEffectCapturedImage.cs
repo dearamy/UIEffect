@@ -179,7 +179,7 @@ namespace UnityEngine.UI
 				_rt.name = mat.name;
 
 				// Copy to temporary RT.
-				_buffer.GetTemporaryRT(s_CopyId, -1, -1, 0, FilterMode.Bilinear);
+				_buffer.GetTemporaryRT(s_CopyId, -1, -1, 0, m_FilterMode);
 				_buffer.Blit(BuiltinRenderTextureType.CurrentActive, s_CopyId);
 
 				// Set properties.
@@ -199,7 +199,7 @@ namespace UnityEngine.UI
 				else if (m_DesamplingRate < m_ReductionRate)
 				{
 					GetDesamplingSize(m_ReductionRate, out w, out h);
-					_buffer.GetTemporaryRT(s_EffectId, w, h, 0, FilterMode.Bilinear);
+					_buffer.GetTemporaryRT(s_EffectId, w, h, 0, m_FilterMode);
 					_buffer.Blit(s_CopyId, s_EffectId, mat);
 					_buffer.ReleaseTemporaryRT(s_CopyId);
 					_buffer.Blit(s_EffectId, rtId);
