@@ -36,7 +36,7 @@ namespace UnityEngine.UI
 			/// <summary>
 			/// Shadow effect mode.
 			/// </summary>
-			public ShadowMode shadowMode = ShadowMode.Shadow;
+			public ShadowStyle shadowMode = ShadowStyle.Shadow;
 
 			/// <summary>
 			/// Color for the shadow effect.
@@ -88,13 +88,31 @@ namespace UnityEngine.UI
 		/// <summary>
 		/// Shadow effect mode.
 		/// </summary>
+		[Obsolete("ShadowMode has been deprecated. Use ShadowStyle instead (UnityUpgradable) -> ShadowStyle", true)]
 		public enum ShadowMode
+		{
+			[Obsolete("ShadowMode.None has been deprecated. Use ShadowStyle.None instead (UnityUpgradable) -> ShadowStyle.None", true)]
+			None = 0,
+			[Obsolete("ShadowMode.Shadow has been deprecated. Use ShadowStyle.Shadow instead (UnityUpgradable) -> ShadowStyle.Shadow", true)]
+			Shadow,
+			[Obsolete("ShadowMode.Outline has been deprecated. Use ShadowStyle.Outline instead (UnityUpgradable) -> ShadowStyle.Outline", true)]
+			Outline,
+			[Obsolete("ShadowMode.Outline8 has been deprecated. Use ShadowStyle.Outline8 instead (UnityUpgradable) -> ShadowStyle.Outline8", true)]
+			Outline8,
+			[Obsolete("ShadowMode.Shadow3 has been deprecated. Use ShadowStyle.Shadow3 instead (UnityUpgradable) -> ShadowStyle.Shadow3", true)]
+			Shadow3,
+		}
+
+		/// <summary>
+		/// Shadow effect style.
+		/// </summary>
+		public enum ShadowStyle
 		{
 			None = 0,
 			Shadow,
+			Shadow3,
 			Outline,
 			Outline8,
-			Shadow3,
 		}
 
 		/// <summary>
@@ -141,9 +159,12 @@ namespace UnityEngine.UI
 		/// <summary>
 		/// Shadow effect mode.
 		/// </summary>
-		public ShadowMode shadowMode { get { return m_ShadowMode; } set { m_ShadowMode = value; SetDirty(); } }
+		public ShadowStyle shadowStyle { get { return m_ShadowStyle; } set { m_ShadowStyle = value; SetDirty(); } }
 
-		[SerializeField] ShadowMode m_ShadowMode;
+		[Obsolete("UIEffect.shadowMode is obsolete, use UIEffect.shadowStyle instead. (UnityUpgradable) -> shadowStyle")]
+		public ShadowStyle shadowMode { get { return m_ShadowStyle; } set { m_ShadowStyle = value; SetDirty(); } }
+
+		[SerializeField][FormerlySerializedAs("m_ShadowMode")]  ShadowStyle m_ShadowStyle;
 
 		/// <summary>
 		/// Tone effect mode.
@@ -350,7 +371,7 @@ namespace UnityEngine.UI
 		public static Material GetMaterial(Shader shader, UIEffect.ToneMode tone, UIEffect.ColorMode color, UIEffect.BlurMode blur)
 		{
 			string variantName = GetVariantName(shader, tone, color, blur);
-			return AssetDatabase.FindAssets("t:Material " + Path.GetFileName(shader.name))
+			return AssetDatabase.FindAssets("t:Material " + variantName)
 				.Select(x => AssetDatabase.GUIDToAssetPath(x))
 				.SelectMany(x=>AssetDatabase.LoadAllAssetsAtPath(x))
 				.OfType<Material>()
@@ -373,9 +394,9 @@ namespace UnityEngine.UI
 		/// Append shadow vertices.
 		/// * It is similar to Shadow component implementation.
 		/// </summary>
-		static void ApplyShadow(List<UIVertex> verts, ref int start, ref int end, ShadowMode mode, float toneLevel, float blur, Vector2 effectDistance, Color color, bool useGraphicAlpha)
+		static void ApplyShadow(List<UIVertex> verts, ref int start, ref int end, ShadowStyle mode, float toneLevel, float blur, Vector2 effectDistance, Color color, bool useGraphicAlpha)
 		{
-			if (ShadowMode.None == mode)
+			if (ShadowStyle.None == mode)
 				return;
 
 			var factor = new Vector2(
@@ -387,14 +408,14 @@ namespace UnityEngine.UI
 			ApplyShadowZeroAlloc(s_Verts, ref start, ref end, effectDistance.x, effectDistance.y, factor, color, useGraphicAlpha);
 
 			// Append Shadow3.
-			if (ShadowMode.Shadow3 == mode)
+			if (ShadowStyle.Shadow3 == mode)
 			{
 				ApplyShadowZeroAlloc(s_Verts, ref start, ref end, effectDistance.x, 0, factor, color, useGraphicAlpha);
 				ApplyShadowZeroAlloc(s_Verts, ref start, ref end, 0, effectDistance.y, factor, color, useGraphicAlpha);
 			}
 
 			// Append Outline.
-			else if (ShadowMode.Outline == mode)
+			else if (ShadowStyle.Outline == mode)
 			{
 				ApplyShadowZeroAlloc(s_Verts, ref start, ref end, effectDistance.x, -effectDistance.y, factor, color, useGraphicAlpha);
 				ApplyShadowZeroAlloc(s_Verts, ref start, ref end, -effectDistance.x, effectDistance.y, factor, color, useGraphicAlpha);
@@ -402,7 +423,7 @@ namespace UnityEngine.UI
 			}
 
 			// Append Outline8.
-			else if (ShadowMode.Outline8 == mode)
+			else if (ShadowStyle.Outline8 == mode)
 			{
 				ApplyShadowZeroAlloc(s_Verts, ref start, ref end, effectDistance.x, -effectDistance.y, factor, color, useGraphicAlpha);
 				ApplyShadowZeroAlloc(s_Verts, ref start, ref end, -effectDistance.x, effectDistance.y, factor, color, useGraphicAlpha);

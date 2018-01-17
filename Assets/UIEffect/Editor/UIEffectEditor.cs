@@ -94,32 +94,6 @@ namespace UnityEditor.UI
 			}
 		}
 
-		public static Material GetOrCreateMaterial(Shader shader, UIEffect.ToneMode tone, UIEffect.ColorMode color, UIEffect.BlurMode blur)
-		{
-			Material mat = UIEffect.GetMaterial(shader, tone, color, blur);
-			if (!mat)
-			{
-				mat = new Material(shader);
-
-				if (0 < tone)
-					mat.EnableKeyword("UI_TONE_" + tone.ToString().ToUpper());
-				if (0 < color)
-					mat.EnableKeyword("UI_COLOR_" + color.ToString().ToUpper());
-				if (0 < blur)
-					mat.EnableKeyword("UI_BLUR_" + blur.ToString().ToUpper());
-
-				mat.name = Path.GetFileName(shader.name)
-				+ (0 < tone ? "-" + tone : "")
-				+ (0 < color ? "-" + color : "")
-				+ (0 < blur ? "-" + blur : "");
-				//mat.hideFlags = HideFlags.NotEditable;
-
-				Directory.CreateDirectory("Assets/UIEffect/Materials");
-				AssetDatabase.CreateAsset(mat, "Assets/UIEffect/Materials/" + mat.name + ".mat");
-			}
-			return mat;
-		}
-
 		void OnEnable()
 		{
 			spAdditionalShadows = serializedObject.FindProperty("m_AdditionalShadows");
@@ -136,7 +110,7 @@ namespace UnityEditor.UI
 		{
 			spAdditionalShadows.InsertArrayElementAtIndex(ro.count);
 			var element = spAdditionalShadows.GetArrayElementAtIndex(ro.count - 1);
-			element.FindPropertyRelative("shadowMode").intValue = (int)UIEffect.ShadowMode.Shadow;
+			element.FindPropertyRelative("shadowMode").intValue = (int)UIEffect.ShadowStyle.Shadow;
 			element.FindPropertyRelative("shadowColor").colorValue = Color.black;
 			element.FindPropertyRelative("effectDistance").vector2Value = new Vector2(1f, -1f);
 			element.FindPropertyRelative("useGraphicAlpha").boolValue = true;
@@ -146,7 +120,7 @@ namespace UnityEditor.UI
 		float ElementHeightCallback(int index)
 		{
 			var element = spAdditionalShadows.GetArrayElementAtIndex(index);
-			if (element.FindPropertyRelative("shadowMode").intValue == (int)UIEffect.ShadowMode.None)
+			if (element.FindPropertyRelative("shadowMode").intValue == (int)UIEffect.ShadowStyle.None)
 				return 16;
 
 			return (spBlurMode.intValue == (int)UIEffect.BlurMode.None ? 66 : 84) + (EditorGUIUtility.wideMode ? 0 : 18);
@@ -163,7 +137,7 @@ namespace UnityEditor.UI
 			r.height = EditorGUIUtility.singleLineHeight;
 			var spMode = sp.FindPropertyRelative("shadowMode");
 			EditorGUI.PropertyField(r, spMode);
-			if (spMode.intValue == (int)UIEffect.ShadowMode.None)
+			if (spMode.intValue == (int)UIEffect.ShadowStyle.None)
 				return;
 
 			r.y += r.height;
@@ -191,11 +165,11 @@ namespace UnityEditor.UI
 			//================
 			// Shadow setting.
 			//================
-			var spShadowMode = serializedObject.FindProperty("m_ShadowMode");
+			var spShadowMode = serializedObject.FindProperty("m_ShadowStyle");
 			EditorGUILayout.PropertyField(spShadowMode);
 
 			// When shadow is enable, show parameters.
-			if (spShadowMode.intValue != (int)UIEffect.ShadowMode.None)
+			if (spShadowMode.intValue != (int)UIEffect.ShadowStyle.None)
 			{
 				EditorGUI.indentLevel++;
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("m_EffectDistance"));
