@@ -329,42 +329,92 @@ namespace UnityEngine.UI
 			{
 				if (Application.isPlaying || !obj)
 					return;
-				
-				var mat = GetMaterial(Shader.Find(shaderName), toneMode, colorMode, blurMode);
-				if(m_EffectMaterial == mat)
+
+				var mat = (0 == toneMode) && (0 == colorMode) && (0 == blurMode)
+						? null
+						: GetOrCreateMaterialVariant(Shader.Find(shaderName), toneMode, colorMode, blurMode);
+
+				if(m_EffectMaterial == mat && graphic.material == mat)
 					return;
 					
 				graphic.material = m_EffectMaterial = mat;
 				EditorUtility.SetDirty(this);
+				EditorUtility.SetDirty(graphic);
 				EditorApplication.delayCall +=AssetDatabase.SaveAssets;
 			};
 		}
-
-		public static Material GetMaterial(Shader shader, UIEffect.ToneMode tone, UIEffect.ColorMode color, UIEffect.BlurMode blur)
+		
+		public static Material GetMaterial(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
 		{
-			string variantName = Path.GetFileName(shader.name)
-			                     + (0 < tone ? "-" + tone : "")
-			                     + (0 < color ? "-" + color : "")
-			                     + (0 < blur ? "-" + blur : "");
-
-			var path = AssetDatabase.FindAssets("t:Material " + variantName)
+			string variantName = GetVariantName(shader, tone, color, blur);
+			return AssetDatabase.FindAssets("t:Material " + variantName)
 				.Select(x => AssetDatabase.GUIDToAssetPath(x))
-				.SingleOrDefault(x => Path.GetFileNameWithoutExtension(x) == variantName);
+				.SelectMany(x => AssetDatabase.LoadAllAssetsAtPath(x))
+				.OfType<Material>()
+				.FirstOrDefault(x => x.name == variantName);
+		}
 
-			return path != null
-				? AssetDatabase.LoadAssetAtPath<Material>(path)
-					: null;
+
+		public static Material GetOrCreateMaterialVariant(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
+		{
+			Material mat = GetMaterial(shader, tone, color, blur);
+
+			if (!mat)
+			{
+				mat = new Material(shader);
+
+				if (0 < tone)
+					mat.EnableKeyword("UI_TONE_" + tone.ToString().ToUpper());
+				if (0 < color)
+					mat.EnableKeyword("UI_COLOR_" + color.ToString().ToUpper());
+				if (0 < blur)
+					mat.EnableKeyword("UI_BLUR_" + blur.ToString().ToUpper());
+
+				mat.name = GetVariantName(shader, tone, color, blur);
+
+#if UIEFFECT_SEPARATE
+				bool isMainAsset = ture;
+				string materialPath = "Assets/UIEffect/Materials/" + mat.name + ".mat";
+#else
+				bool isMainAsset = (0 == tone) && (0 == color) && (0 == blur);
+				string materialPath = "Assets/UIEffect/Materials/" + Path.GetFileName(shader.name) + ".mat";
+#endif
+				if (isMainAsset)
+				{
+					Directory.CreateDirectory(Path.GetDirectoryName(materialPath));
+					AssetDatabase.CreateAsset(mat, materialPath);
+					AssetDatabase.SaveAssets();
+				}
+				else
+				{
+					AssetDatabase.AddObjectToAsset(mat, materialPath);
+				}
+			}
+			return mat;
+		}
+
+		public static string GetVariantName(Shader shader, ToneMode tone, ColorMode color, BlurMode blur)
+		{
+			return
+#if UIEFFECT_SEPARATE
+				"[Separated]" + Path.GetFileName(shader.name)
+#else
+				Path.GetFileName(shader.name)
+#endif
+				+ (0 < tone ? "-" + tone : "")
+				+ (0 < color ? "-" + color : "")
+				+ (0 < blur ? "-" + blur : "");
 		}
 #endif
 
-		//################################
-		// Internal Method.
-		//################################
-		/// <summary>
-		/// Append shadow vertices.
-		/// * It is similar to Shadow component implementation.
-		/// </summary>
-		static void ApplyShadow(List<UIVertex> verts, ref int start, ref int end, ShadowStyle mode, float toneLevel, float blur, Vector2 effectDistance, Color color, bool useGraphicAlpha)
+			//################################
+			// Internal Method.
+			//################################
+			/// <summary>
+			/// Append shadow vertices.
+			/// * It is similar to Shadow component implementation.
+			/// </summary>
+			static void ApplyShadow(List<UIVertex> verts, ref int start, ref int end, ShadowStyle mode, float toneLevel, float blur, Vector2 effectDistance, Color color, bool useGraphicAlpha)
 		{
 			if (ShadowStyle.None == mode)
 				return;
